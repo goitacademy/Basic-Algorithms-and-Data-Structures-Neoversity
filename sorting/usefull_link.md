@@ -5,3 +5,7 @@ https://blog.algorithmexamples.com/sorting-algorithm/11-everyday-life-uses-of-so
 
 Additional algorithms explained:
 https://www.sitepoint.com/best-sorting-algorithms/#insertionsort
+
+Visual demonstrating
+https://visualgo.net/en/sorting
+https://www.sortvisualizer.com/
