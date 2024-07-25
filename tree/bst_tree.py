@@ -143,8 +143,8 @@ class BinarySearchTree(object):
         if node is None or node.data == data:
             return node
         if data < node.data:
-            return self.search_node(data, node.leftChild)
-        return self.search_node(data, node.rightChild)
+            return self.search_node(data, node.left_child)
+        return self.search_node(data, node.right_child)
 
     def display(self, traversal_type=None):
         if traversal_type:
@@ -161,11 +161,15 @@ if __name__ == '__main__':
     bst.insert(14)
     bst.insert(12)
     bst.insert(5)
+    bst.insert(3)
+    bst.insert(2)
+    bst.insert(4)
+    # bst.insert(8)
     bst.insert(1)
     bst.display()
     bst.remove(10)
     bst.display()
-    found_node = bst.search(5)
+    found_node = bst.search(90)
     if found_node:
         print(f"Вузол з числом {found_node.data} знайдено.")
     else:
