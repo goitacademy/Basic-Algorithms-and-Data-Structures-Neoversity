@@ -32,3 +32,14 @@ def selection_sort_recursive(arr, index=0):
 array = [12, 11, 13, 5, 6, 7]
 print(f"Given array is {array}")  # Виводимо початковий масив
 print(f"Sorted array is {selection_sort_recursive(array)}")  # Виводимо відсортований масив
+
+def test_selection(arr: list):
+    for i in range(len(arr)):
+        min_index = arr.index(min(arr[i:]), i)
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
+
+# Використання сортування вибором за допомогою вбудованого функціоналу Python
+array = [12, 11, 13, 5, 6, 7]
+print(f"Test Given array is {array}")  # Виводимо початковий масив
+print(f"Test Sorted array is {test_selection(array)}")  # Виводимо відсортований масив
