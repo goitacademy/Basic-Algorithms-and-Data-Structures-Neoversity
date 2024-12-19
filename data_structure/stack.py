@@ -1,4 +1,4 @@
-print("Stack")
+# print("Stack")
 # class Stack:
 #   def __init__(self):
 #     self.stack = []
@@ -55,16 +55,19 @@ def infix_to_postfix(exp: str) -> str:
             while stack and priority[stack[-1]] >= priority[token]:
                 output.append(stack.pop())  # Видаляємо оператори з вищим або рівним пріоритетом
             stack.append(token)  # Додаємо поточний оператор до стеку
+        # Виводимо поточний стан
+        print("{:<10} {:<30} {:<30}".format(token, " ".join(output), " ".join(stack)))
     # Видаляємо всі залишкові оператори зі стеку до виходу
     while stack:
         output.append(stack.pop())
+        print("{:<10} {:<30} {:<30}".format(token, " ".join(output), " ".join(stack)))
     # Повертаємо постфіксний вираз у вигляді рядка
     return ' '.join(output)
-#
-# # Вхідний інфіксний вираз
-# expression = "3 + 4 * 2 + 1 - 3 * 2"
-# # Перетворюємо інфіксний вираз в постфіксний
-# postfix_expr = infix_to_postfix(expression)
-# # Виводимо результат
-# print(postfix_expr)  # Виведе "3 4 2 * + 1 + 3 2 * -"
-# print(eval(expression))
+
+# Вхідний інфіксний вираз
+expression = "3 + 4 * 2 + 1 - 3 * 2"
+# Перетворюємо інфіксний вираз в постфіксний
+postfix_expr = infix_to_postfix(expression)
+# Виводимо результат
+print(postfix_expr)  # Виведе "3 4 2 * + 1 + 3 2 * -"
+print(eval(expression))
